@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fialexan <fialexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: filipe <filipe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 11:02:25 by fialexan          #+#    #+#             */
-/*   Updated: 2022/10/28 12:00:59 by fialexan         ###   ########.fr       */
+/*   Created: 2022/02/17 11:11:18 by fialexan          #+#    #+#             */
+/*   Updated: 2023/04/04 23:04:32 by filipe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
-	int		i;
-	int		e;
-	char	*str;
+	const char *last_occurrence;
 
-	i = 0;
-	e = 0;
-	str = (void *)s;
-	while (str[e])
-		e++;
-	while (i <= e)
+	last_occurrence = NULL;
+	while (*s != '\0')
 	{
-		if (str[i] == (char)c)
-			return (&str[i]);
-		i++;
+		if (*s == c)
+			last_occurrence = s;
+		s++;
 	}
-	return (NULL);
+	return ((char *)last_occurrence);
 }
