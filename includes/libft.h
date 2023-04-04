@@ -6,7 +6,7 @@
 /*   By: fialexan <fialexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 10:42:50 by fialexan          #+#    #+#             */
-/*   Updated: 2023/04/04 18:27:38 by fialexan         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:35:54 by fialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,24 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 
 // String Functions
-
+/**
+ * @brief Calculate the length of a string.
+ * 
+ * @param s const char * 
+ * @return size of string up to '\0'
+ */
 size_t	ft_strlen(const char *s);
+
+/**
+ * @brief Copies up to 'size' - 1 characters from the NUL-terminated string 'src'
+ * to 'dst', NUL-terminating the result.
+ * 
+ * @param dst char *
+ * @param src const char *
+ * @param size size_t
+ * @return return the total length of the string it tried to 
+ * create (length of 'src').
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strdup(const char *s);
