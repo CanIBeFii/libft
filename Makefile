@@ -53,36 +53,36 @@ all: $(NAME) ## Compiles the project
 $(NAME): $(OBJECTS_DIRECTORY) $(OBJECTS)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
-	@echo "\n\t$(CYAN)$(NAME): $(GREEN) objects files $(RESET)were created"
-	@echo "\t$(CYAN)$(NAME): $(GREEN)$(NAME)$(RESET) was created"
-	@echo "All done, now if the $(BLUE)FBI$(RESET) comes to your house, you can say you're innocent :D"
+	@echo -e "\n\t$(CYAN)$(NAME): $(GREEN) objects files $(RESET)were created"
+	@echo -e "\t$(CYAN)$(NAME): $(GREEN)$(NAME)$(RESET) was created"
+	@echo -e "All done, now if the $(BLUE)FBI$(RESET) comes to your house, you can say you're innocent :D"
 	
 $(OBJECTS_DIRECTORY): ## Creates the objects directory and compiles all files to .o
 	@mkdir -p $(OBJECTS_DIRECTORY)
 	@mkdir -p $(OBJECTS_DIRECTORY)$(ASCII_DIRECTORY)
 	@mkdir -p $(OBJECTS_DIRECTORY)$(STRING_DIRECTORY)
-	@echo "What could go wrong in compiling all of this code:"
-	@echo "\t$(CYAN)$(NAME): $(GREEN)$(OBJECTS_DIRECTORY)$(RESET) was created"
-	@echo "\t$(CYAN)$(NAME): $(GREEN)$(OBJECTS_DIRECTORY)$(ASCII_DIRECTORY)$(RESET) was birthed"
-	@echo "\t$(CYAN)$(NAME): $(GREEN)$(OBJECTS_DIRECTORY)$(STRING_DIRECTORY)$(RESET) has spawned"
-	@echo "Now a lot of commas will appear on your screen, don't worry it's just some silly things nothing incriminating :D"
+	@echo -e "What could go wrong in compiling all of this code:"
+	@echo -e "\t$(CYAN)$(NAME): $(GREEN)$(OBJECTS_DIRECTORY)$(RESET) was created"
+	@echo -e "\t$(CYAN)$(NAME): $(GREEN)$(OBJECTS_DIRECTORY)$(ASCII_DIRECTORY)$(RESET) was birthed"
+	@echo -e "\t$(CYAN)$(NAME): $(GREEN)$(OBJECTS_DIRECTORY)$(STRING_DIRECTORY)$(RESET) has spawned"
+	@echo -e "Now a lot of commas will appear on your screen, don't worry it's just some silly things nothing incriminating :D"
 	
 $(OBJECTS_DIRECTORY)%.o: $(SOURCES_DIRECTORY)%.c $(HEADERS)
 	@$(CC) $(FLAGS) $(INCLUDES) $< -o $@
-	@echo "$(GREEN).$(RESET)\c"
+	@echo -e "$(GREEN).$(RESET)\c"
 
 clean: ## Cleans the project
 	@rm -rf $(OBJECTS_DIRECTORY)
-	@echo "Deleting all object files, we can't let $(BLUE)FBI$(RESET) get all of this evidence:"
-	@echo "\t$(CYAN)$(NAME): $(RED)$(OBJECTS_DIRECTORY)$(RESET) was deleted"
-	@echo "\t$(CYAN)$(NAME): $(RED)$(OBJECTS_DIRECTORY)$(ASCII_DIRECTORY)$(RESET) was evaporated"	
-	@echo "\t$(CYAN)$(NAME): $(RED)object files$(RESET) were annihilated"
-	@echo "Now you can see the $(YELLOW)light$(RESET) of day"
+	@echo -e "Deleting all object files, we can't let $(BLUE)FBI$(RESET) get all of this evidence:"
+	@echo -e "\t$(CYAN)$(NAME): $(RED)$(OBJECTS_DIRECTORY)$(RESET) was deleted"
+	@echo -e "\t$(CYAN)$(NAME): $(RED)$(OBJECTS_DIRECTORY)$(ASCII_DIRECTORY)$(RESET) was evaporated"	
+	@echo -e "\t$(CYAN)$(NAME): $(RED)object files$(RESET) were annihilated"
+	@echo -e "Now you can see the $(YELLOW)light$(RESET) of day"
 
 fclean: clean ## Deep cleans the project
 	@rm -f $(NAME)
-	@echo "\nBurning the last thing that connects me to this project:"
-	@echo "\t$(CYAN)$(NAME): $(RED)$(NAME)$(RESET) was erased from the world surface"
+	@echo -e "\nBurning the last thing that connects me to this project:"
+	@echo -e "\t$(CYAN)$(NAME): $(RED)$(NAME)$(RESET) was erased from the world surface"
 
 re: fclean all ## Deep cleans and recompiles the project
 	
