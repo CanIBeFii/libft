@@ -6,11 +6,11 @@
 /*   By: fialexan <fialexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 10:58:46 by fialexan          #+#    #+#             */
-/*   Updated: 2023/04/04 18:24:07 by fialexan         ###   ########.fr       */
+/*   Updated: 2023/05/31 18:15:45 by fialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../../includes/libft.h"
 
 int	ft_isdigit(int c)
 {
