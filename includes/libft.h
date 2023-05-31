@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: filipe <filipe@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fialexan <fialexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 10:42:50 by fialexan          #+#    #+#             */
-/*   Updated: 2023/04/04 23:28:47 by filipe           ###   ########.fr       */
+/*   Updated: 2023/05/31 18:21:11 by fialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 # endif
 
 typedef struct s_list {
-  void *content;
-  struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 // LIBFT
 
@@ -36,7 +36,7 @@ typedef struct s_list {
  * @param c int
  * @return 0 if false, 1 if true
  */
-int ft_isalpha(int c);
+int		ft_isalpha(int c);
 
 /**
  * @brief Check if the given number corresponds to a numeric ASCII character.
@@ -44,7 +44,7 @@ int ft_isalpha(int c);
  * @param c int
  * @return 0 if false, 1 if true
  */
-int ft_isdigit(int c);
+int		ft_isdigit(int c);
 
 /**
  * @brief Check if the given number corresponds to an
@@ -53,7 +53,7 @@ int ft_isdigit(int c);
  * @param c int
  * @return 0 if false, 1 if true
  */
-int ft_isalnum(int c);
+int		ft_isalnum(int c);
 
 /**
  * @brief Check if the given number corresponds to an ASCII character.
@@ -61,7 +61,7 @@ int ft_isalnum(int c);
  * @param c int
  * @return 0 if false, 1 if true
  */
-int ft_isascii(int c);
+int		ft_isascii(int c);
 
 /**
  * @brief Check if the given number corresponds to a printable ASCII character.
@@ -69,7 +69,15 @@ int ft_isascii(int c);
  * @param c int
  * @return 0 if false, 1 if true
  */
-int ft_isprint(int c);
+int		ft_isprint(int c);
+
+/**
+ * @brief Check if the given number corresponds to a space ASCII character.
+ * 
+ * @param c 
+ * @return 0 if false, 1 if true
+ */
+int		ft_isspace(int c);
 
 // String Functions
 
@@ -79,7 +87,7 @@ int ft_isprint(int c);
  * @param s const char *
  * @return size of string up to '\0'
  */
-size_t ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 
 /**
  * @brief Copies up to 'size' - 1 characters from the NUL-terminated string
@@ -91,7 +99,7 @@ size_t ft_strlen(const char *s);
  * @return The total length of the string it tried to
  * create (length of 'src').
  */
-size_t ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 /**
  * @brief Appends the NUL-terminated string 'src' to the end of 'dst'.
@@ -103,7 +111,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size);
  * @param size size_t
  * @return The inital length of 'dst' plus the length of 'src'
  */
-size_t ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /**
  * @brief Creates a new string which is a duplicate of 's'.
@@ -112,7 +120,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t size);
  * @return A pointer to the duplicated string, or NULL if insufficient
  *  memory was available.
  */
-char *ft_strdup(const char *s);
+char	*ft_strdup(const char *s);
 
 /**
  * @brief Returns a pointer to the first occurence of the character 'c' in
@@ -123,7 +131,7 @@ char *ft_strdup(const char *s);
  * @return A pointer to the matched character or NULL if the character is
  * not found.
  */
-char *ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
 /**
  * @brief Returns a pointer to the last occurence of the charater 'c' in
@@ -134,7 +142,7 @@ char *ft_strchr(const char *s, int c);
  * @return A pointer to the matched character or NULL if the character is
  * not found.
  */
-char *ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 /**
  * @brief Returns a integer showing the result of the comparison:
@@ -149,7 +157,7 @@ char *ft_strrchr(const char *s, int c);
  * @param s2 
  * @return int 
  */
-int ft_strcmp(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *big, const char *little, size_t len);
 char *ft_substr(char const *s, unsigned int start, size_t len);
