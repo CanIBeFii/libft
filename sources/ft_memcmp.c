@@ -6,7 +6,7 @@
 /*   By: fialexan <fialexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 10:59:43 by fialexan          #+#    #+#             */
-/*   Updated: 2022/10/28 12:00:59 by fialexan         ###   ########.fr       */
+/*   Updated: 2023/09/06 14:57:41 by fialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (*(unsigned char *)(s1 + i) == *(unsigned char *)(s2 + i) &&
 			i < n - 1)
-			i++;
+		i++;
 	return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
 }
